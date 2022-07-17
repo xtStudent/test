@@ -39,7 +39,7 @@
 HEAD分离并指向前一个节点
 - git checkout 分支名~N
 HEAD分离并指向前N个节点
-- git commit --amend
+- git commit --amend -m '更改后的commit信息'
 修改提交信息
 - git reset HEAD~N
 回退N个提交
