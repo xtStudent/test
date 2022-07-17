@@ -28,5 +28,29 @@
 与merge不同的是rebase合并看起来不会产生新的节点（实际上是会产生的，只是做了一次复制）
 1. 优点：会使提交历史看起来更加线性、干净
 2. 缺点：虽然提交看起来像是线性的，但并不是真正的按时间排序, 并且当合并发生冲突时，理论上来讲有几个节点rebase到目标分支就可能处理几次冲突
-- cherry-pick
+- git cherry-pick 分支名1/节点哈希值, 分支名2节点哈希值
 选择某几个节点进行合并
+
+# 回退相关
+- git checkout 节点哈希值
+- git checkout --detach
+直接脱离分支指向当前节点
+- git checkout 分支名/HEAD^
+HEAD分离并指向前一个节点
+- git checkout 分支名~N
+HEAD分离并指向前N个节点
+- git commit --amend -m '更改后的commit信息'
+修改提交信息
+- git reset HEAD~N
+回退N个提交
+
+# 远程相关
+- git clone 仓库地址
+- git fetch 远程仓库地址/分支名
+将远程新增加的节点以及引用（分支/HEAD）的状态下载到本地
+- git pull 远程分支名 / git pull --rebase 远程分支名
+从远程仓库的某个引用拉取代码
+- git push 远程分支名
+将本地提交推送至远程
+
+
