@@ -43,3 +43,14 @@ HEAD分离并指向前N个节点
 修改提交信息
 - git reset HEAD~N
 回退N个提交
+
+# 远程相关
+- git clone 仓库地址
+- git fetch 远程仓库地址/分支名
+将远程新增加的节点以及引用（分支/HEAD）的状态下载到本地
+- git pull 远程分支名 / git pull --rebase 远程分支名
+从远程仓库的某个引用拉取代码
+- git push 远程分支名
+将本地提交推送至远程
+
+
